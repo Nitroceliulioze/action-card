@@ -1,0 +1,41 @@
+.container {
+  .card {
+    margin: 2em;
+  }
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    margin: 2em;
+    .card-title {
+      font-weight: bold;
+    }
+    button {
+      border: none;
+      background-color: transparent;
+      font-weight: bold;
+      svg{
+        margin-right: 5px;
+      }
+    }
+  }
+
+  .card-body {
+    margin: 2em;
+    .accordion-header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .title-row {
+            display: flex;
+            .title{
+                font-weight: bold;
+                padding-inline: 20px;
+            }
+            .badge {
+                border-radius: 25px;
+                
+            }
+        }
+    }
+  }
+}
