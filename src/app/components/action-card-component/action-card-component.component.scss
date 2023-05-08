@@ -8,11 +8,13 @@
     margin: 2em;
     .card-title {
       font-weight: bold;
+      font-size: 36px;
     }
     button {
       border: none;
       background-color: transparent;
       font-weight: bold;
+      font-size: 26px;
     }
   }
   .card-body {
@@ -25,16 +27,24 @@
             display: flex;
             .title{
                 font-weight: bold;
+                font-size: 26px;
                 padding-inline: 20px;
             }
             .badge {
-                border-radius: 25px;
+                border-radius: 25px;                
+                line-height: 16px;
                 
             }
         }
     }
     .list-items {
-        
+      margin-left: 1.5em;
+        li {
+          font-size: 20px;
+        }
     }
+  }
+  i {
+    cursor: pointer;
   }
 }

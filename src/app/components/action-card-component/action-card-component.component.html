@@ -12,9 +12,9 @@
       <div class="row">
         <div class="accordion-header">
           <div class="title-row">
-            <div class="icon">
-            <!-- <i class="bi bi-chevron-compact-up"></i> -->
-            <i class="bi bi-chevron-compact-down"></i>
+            <div class="icon" (click)="toggleList()">
+            <i class="bi bi-chevron-compact-up" *ngIf="isListOpen"></i>
+            <i class="bi bi-chevron-compact-down" *ngIf="!isListOpen"></i>
           </div>
           <div class="title">Discover New Features</div> <span class="badge bg-secondary d-inline-flex align-items-center">Must have item</span>
           </div>
@@ -26,7 +26,7 @@
             <span>Delete?</span>
           </div>
         </div>
-        <div class="list-items">
+        <div class="list-items" *ngIf="isListOpen">
           <ul>
             <li>Interactive Dashboard</li>
             <li>Smart Reminders & Notifications</li>

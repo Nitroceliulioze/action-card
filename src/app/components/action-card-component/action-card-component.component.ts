@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./action-card-component.component.scss']
 })
 export class ActionCardComponentComponent {
+  isListOpen: boolean = false;
 
+  toggleList() {
+    this.isListOpen = !this.isListOpen
+  }
 }
