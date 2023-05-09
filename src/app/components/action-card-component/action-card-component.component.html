@@ -18,11 +18,11 @@
               <i class="bi bi-chevron-compact-up" *ngIf="isListOpen"></i>
               <i class="bi bi-chevron-compact-down" *ngIf="!isListOpen"></i>
             </div>
-            <div class="title">{{ row.title }}</div>
+            <div class="title">{{ row.cardRowTitle }}</div>
             <span
               *ngIf="!row.isDeletableAction"
               class="badge bg-secondary d-inline-flex align-items-center"
-              >{{ row.badge }}</span
+              >{{ row.cardBadgeText }}</span
             >
           </div>
 
@@ -35,11 +35,11 @@
               <div *ngIf="showPopover" class="popover-container">
                 <div class="popover-text">
                   <div class="popover-body">
-                    <strong>{{ row.popoverHeader }}</strong
+                    <strong>{{ row.cardActionPopoverHeader }}</strong
                     ><i (click)="closePopover()" class="bi bi-x"></i>
                   </div>
                   <div class="popover-body">
-                    {{ row.popoverBody }}
+                    {{ row.cardActionPopoverBody }}
                   </div>
                 </div>
               </div>
@@ -51,57 +51,12 @@
         </div>
 
         <div class="list-items" *ngIf="isListOpen">
-          
-            <ul *ngFor="let listItem of row.listItems">
-              <li>{{ listItem }}</li>
-            </ul>
-          
+          <ul *ngFor="let listItem of row.cardRowListItems">
+            <li>{{ listItem }}</li>
+          </ul>
         </div>
         <hr />
       </div>
-
-      <!-- <div class="row">
-        <div class="accordion-header">
-          <div class="title-row">
-            <div class="icon">
-              <i class="bi bi-chevron-compact-up"></i>
-              <i class="bi bi-chevron-compact-down"></i> 
-            </div>
-            <div class="title">Better Workflow</div>
-          </div>
-
-          <div class="icons">
-            <i class="bi bi-pencil-square"></i>
-
-            <i class="bi bi-trash"></i>
-          </div>
-        </div>
-        <div class="list-items"></div>
-      </div>
-      <hr />
-
-      <div class="row">
-        <div class="accordion-header">
-          <div class="title-row">
-            <div class="icon">
-              <i class="bi bi-chevron-compact-up"></i>
-              <i class="bi bi-chevron-compact-down"></i>
-            </div>
-            <div class="title">Achieve Great Results</div>
-          </div>
-
-          <div class="icons">
-            <i class="bi bi-pencil-square"></i>
-
-            <i class="bi bi-trash"></i>
-          </div>
-        </div>
-        <div class="list-items"></div>
-      </div>
-    </div>
-  </div>
-</div>
- -->
     </div>
   </div>
 </div>

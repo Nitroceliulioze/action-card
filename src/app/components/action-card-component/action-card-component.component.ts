@@ -7,24 +7,24 @@ import { ActionCardContentInterface } from './action-card-content-interface';
   styleUrls: ['./action-card-component.component.scss'],
 })
 export class ActionCardComponentComponent {
-  isListOpen: boolean;
-  showPopover: boolean;
   @Input() isDeletableAction!: boolean;
   @Input() title!: string;
   @Input() titleColor!: string;
   @Input() addActivityText!: string;
   @Input() deleteText!: string;
-  @Input() cardContentRow: any;
-
+  @Input() cardContentRow: ActionCardContentInterface[] = [];
+  isListOpen: boolean;
+  showPopover: boolean;
+  
   constructor() {
     this.isListOpen = false;
     this.showPopover = false;
   }
 
-  closePopover():void {
+  closePopover(): void {
     this.showPopover = false;
   }
-  
+
   toggleList(): void {
     this.isListOpen = !this.isListOpen;
   }
