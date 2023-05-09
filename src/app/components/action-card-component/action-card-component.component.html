@@ -11,29 +11,27 @@
     </div>
 
     <div class="card-body">
-      <div class="row" *ngFor="let row of cardContentRow">
-        <div class="accordion-header">
-          <div class="title-row">
-            <div class="icon" (click)="toggleList()">
+      <div *ngFor="let row of cardContentRow">
+        <ng-container>
+          <div class="accordion-header">
+            <div (click)="toggleList()" class="title-row">
               <i class="bi bi-chevron-compact-up" *ngIf="isListOpen"></i>
               <i class="bi bi-chevron-compact-down" *ngIf="!isListOpen"></i>
+              <div class="title">{{ row.cardRowTitle }}</div>
+              <span
+                *ngIf="!row.isDeletableAction"
+                class="badge bg-secondary d-inline-flex align-items-center"
+                >{{ row.cardBadgeText }}</span
+              >
             </div>
-            <div class="title">{{ row.cardRowTitle }}</div>
-            <span
-              *ngIf="!row.isDeletableAction"
-              class="badge bg-secondary d-inline-flex align-items-center"
-              >{{ row.cardBadgeText }}</span
-            >
-          </div>
 
-          <div class="icons">
-            <i class="bi bi-pencil-square"></i>
-            <div class="delete-action" *ngIf="!row.isDeletableAction">
-              <span class="deleteText" (mouseover)="showPopover = true">{{
-                deleteText
-              }}</span>
-              <div *ngIf="showPopover" class="popover-container">
-                <div class="popover-text">
+            <div class="icons">
+              <i class="bi bi-pencil-square"></i>
+              <div class="delete-action" *ngIf="!row.isDeletableAction">
+                <span class="deleteText" (click)="showPopover = true">{{
+                  deleteText
+                }}</span>
+                <div *ngIf="showPopover" class="popover-container">
                   <div class="popover-body">
                     <strong>{{ row.cardActionPopoverHeader }}</strong
                     ><i (click)="closePopover()" class="bi bi-x"></i>
@@ -43,18 +41,18 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="delete-action" *ngIf="row.isDeletableAction">
-              <i class="bi bi-trash"></i>
+              <i *ngIf="row.isDeletableAction" class="bi bi-trash"></i>
             </div>
           </div>
-        </div>
+        </ng-container>
 
-        <div class="list-items" *ngIf="isListOpen">
-          <ul *ngFor="let listItem of row.cardRowListItems">
-            <li>{{ listItem }}</li>
-          </ul>
-        </div>
+        <ng-container>
+          <div class="list-items" *ngIf="isListOpen">
+            <ul *ngFor="let listItem of row.cardRowListItems">
+              <li>{{ listItem }}</li>
+            </ul>
+          </div>
+        </ng-container>
         <hr />
       </div>
     </div>
