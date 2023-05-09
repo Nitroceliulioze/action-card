@@ -1,8 +1,9 @@
 export interface ActionCardContentInterface {
-    title: string;
-    addActivityText: string;
+    id: number;
+    // title: string;
+    // addText: string;
     rowTitle: string;
-    badge: string;
+    badge?: string;
     isDeletableAction?: boolean;
     rowList: string[];
 }

@@ -7,12 +7,13 @@ import { ActionCardContentInterface } from './action-card-content-interface';
   styleUrls: ['./action-card-component.component.scss'],
 })
 export class ActionCardComponentComponent {
-  isListOpen: boolean ;
+  isListOpen: boolean;
   showPopover: boolean;
+  isDeletableAction!: boolean;
   @Input() title!: string;
   @Input() titleColor!: string;
-  @Input() rowData!: ActionCardContentInterface;
   @Input() badge!: string;
+  @Input() rowData!: ActionCardContentInterface;
   @Input() addActivityText!: string;
   @Input() deleteText!: string;
 

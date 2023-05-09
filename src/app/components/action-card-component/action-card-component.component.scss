@@ -38,6 +38,8 @@
       }
     }
     .icons {
+      display: flex;
+      gap: 5px;
       .popover-container {
         position: absolute;
         background-color: #d1e7dd;
