@@ -9,13 +9,12 @@ import { ActionCardContentInterface } from './action-card-content-interface';
 export class ActionCardComponentComponent {
   isListOpen: boolean;
   showPopover: boolean;
-  isDeletableAction!: boolean;
+  @Input() isDeletableAction!: boolean;
   @Input() title!: string;
   @Input() titleColor!: string;
-  @Input() badge!: string;
-  @Input() rowData!: ActionCardContentInterface;
   @Input() addActivityText!: string;
   @Input() deleteText!: string;
+  @Input() cardContentRow: any;
 
   constructor() {
     this.isListOpen = false;

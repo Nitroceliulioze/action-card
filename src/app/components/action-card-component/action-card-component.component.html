@@ -11,62 +11,60 @@
     </div>
 
     <div class="card-body">
-      <div class="row">
+      <div class="row" *ngFor="let row of cardContentRow">
         <div class="accordion-header">
           <div class="title-row">
             <div class="icon" (click)="toggleList()">
               <i class="bi bi-chevron-compact-up" *ngIf="isListOpen"></i>
               <i class="bi bi-chevron-compact-down" *ngIf="!isListOpen"></i>
             </div>
-            <div class="title">Discover New Features</div>
-            <span class="badge bg-secondary d-inline-flex align-items-center">{{
-              badge
-            }}</span>
+            <div class="title">{{ row.title }}</div>
+            <span
+              *ngIf="!row.isDeletableAction"
+              class="badge bg-secondary d-inline-flex align-items-center"
+              >{{ row.badge }}</span
+            >
           </div>
 
           <div class="icons">
             <i class="bi bi-pencil-square"></i>
-            <div class="delete-action" *ngIf="!isDeletableAction">
+            <div class="delete-action" *ngIf="!row.isDeletableAction">
               <span class="deleteText" (mouseover)="showPopover = true">{{
                 deleteText
               }}</span>
               <div *ngIf="showPopover" class="popover-container">
                 <div class="popover-text">
                   <div class="popover-body">
-                    <strong
-                      >Do you want to delete this feature? First create another
-                      “must have tool”.</strong
+                    <strong>{{ row.popoverHeader }}</strong
                     ><i (click)="closePopover()" class="bi bi-x"></i>
                   </div>
                   <div class="popover-body">
-                    There must be at least one “Must have tool” in your list. If
-                    you wish to delete this feature, you first need to create
-                    another feature with the same badge.
+                    {{ row.popoverBody }}
                   </div>
                 </div>
               </div>
             </div>
-            <div class="delete-action" *ngIf="isDeletableAction">
+            <div class="delete-action" *ngIf="row.isDeletableAction">
               <i class="bi bi-trash"></i>
             </div>
           </div>
         </div>
 
         <div class="list-items" *ngIf="isListOpen">
-          <ul>
-            <li>Interactive Dashboard</li>
-            <li>Smart Reminders & Notifications</li>
-            <li>Data-driven Decision Making</li>
-          </ul>
+          
+            <ul *ngFor="let listItem of row.listItems">
+              <li>{{ listItem }}</li>
+            </ul>
+          
         </div>
+        <hr />
       </div>
-      <hr />
 
-      <div class="row">
+      <!-- <div class="row">
         <div class="accordion-header">
           <div class="title-row">
             <div class="icon">
-              <!-- <i class="bi bi-chevron-compact-up"></i> -->
+              <i class="bi bi-chevron-compact-up"></i>
               <i class="bi bi-chevron-compact-down"></i> 
             </div>
             <div class="title">Better Workflow</div>
@@ -86,7 +84,7 @@
         <div class="accordion-header">
           <div class="title-row">
             <div class="icon">
-              <!-- <i class="bi bi-chevron-compact-up"></i> -->
+              <i class="bi bi-chevron-compact-up"></i>
               <i class="bi bi-chevron-compact-down"></i>
             </div>
             <div class="title">Achieve Great Results</div>
@@ -100,6 +98,10 @@
         </div>
         <div class="list-items"></div>
       </div>
+    </div>
+  </div>
+</div>
+ -->
     </div>
   </div>
 </div>
