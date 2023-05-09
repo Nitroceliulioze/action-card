@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ActionCardContentInterface } from './action-card-content-interface';
 
 @Component({
   selector: 'app-action-card-component',
@@ -8,8 +9,9 @@ import { Component, Input } from '@angular/core';
 export class ActionCardComponentComponent {
   isListOpen: boolean ;
   showPopover: boolean;
+  @Input() title!: string;
   @Input() titleColor!: string;
-  //  @Input() rowData Array of objects needs interface
+  @Input() rowData!: ActionCardContentInterface;
   @Input() badge!: string;
   @Input() addActivityText!: string;
   @Input() deleteText!: string;
