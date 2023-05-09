@@ -6,14 +6,24 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./action-card-component.component.scss'],
 })
 export class ActionCardComponentComponent {
-  isListOpen: boolean = false;
+  isListOpen: boolean ;
+  showPopover: boolean;
   @Input() titleColor!: string;
   //  @Input() rowData Array of objects needs interface
   @Input() badge!: string;
   @Input() addActivityText!: string;
   @Input() deleteText!: string;
 
-  toggleList() {
+  constructor() {
+    this.isListOpen = false;
+    this.showPopover = false;
+  }
+
+  closePopover():void {
+    this.showPopover = false;
+  }
+  
+  toggleList(): void {
     this.isListOpen = !this.isListOpen;
   }
 }

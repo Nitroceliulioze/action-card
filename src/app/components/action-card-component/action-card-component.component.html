@@ -1,7 +1,9 @@
 <div class="container">
   <div class="card">
     <div class="card-top">
-      <h5 class="card-title">Card for Organizing Activities</h5>
+      <h5 class="card-title" [ngStyle]="{ color: 'titleColor' }">
+        Card for Organizing Activities
+      </h5>
       <button>
         <i class="bi bi-plus-circle"></i>
         {{ addActivityText }}
@@ -13,19 +15,36 @@
         <div class="accordion-header">
           <div class="title-row">
             <div class="icon" (click)="toggleList()">
-            <i class="bi bi-chevron-compact-up" *ngIf="isListOpen"></i>
-            <i class="bi bi-chevron-compact-down" *ngIf="!isListOpen"></i>
+              <i class="bi bi-chevron-compact-up" *ngIf="isListOpen"></i>
+              <i class="bi bi-chevron-compact-down" *ngIf="!isListOpen"></i>
+            </div>
+            <div class="title">Discover New Features</div>
+            <span class="badge bg-secondary d-inline-flex align-items-center">{{
+              badge
+            }}</span>
           </div>
-          <div [ngStyle]="{'color':'titleColor'}" class="title" >Discover New Features</div> <span class="badge bg-secondary d-inline-flex align-items-center">{{ badge }}</span>
-          </div>
-          
+
           <div class="icons">
             <i class="bi bi-pencil-square"></i>
-
-         
-            <span>{{deleteText}}</span>
+            <span class="deleteText" (mouseover)="showPopover = true" >{{ deleteText }}</span>
+            <div *ngIf="showPopover" class="popover-container">
+              <div class="popover-text">
+                <div class="popover-body">
+                  <strong
+                    >Do you want to delete this feature? First create another
+                    “must have tool”.</strong
+                  ><i (click)='closePopover()' class="bi bi-x"></i>
+                </div>
+                <div class="popover-body">
+                  There must be at least one “Must have tool” in your list. If
+                  you wish to delete this feature, you first need to create
+                  another feature with the same badge.
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
         <div class="list-items" *ngIf="isListOpen">
           <ul>
             <li>Interactive Dashboard</li>
@@ -34,52 +53,46 @@
           </ul>
         </div>
       </div>
-      <hr>
+      <hr />
 
       <div class="row">
         <div class="accordion-header">
           <div class="title-row">
             <div class="icon">
               <i class="bi bi-chevron-compact-up"></i>
-            <!-- <i class="bi bi-chevron-compact-down"></i> -->
+              <!-- <i class="bi bi-chevron-compact-down"></i> -->
+            </div>
+            <div class="title">Better Workflow</div>
           </div>
-          <div class="title">Better Workflow</div> 
-          </div>
-          
+
           <div class="icons">
             <i class="bi bi-pencil-square"></i>
 
             <i class="bi bi-trash"></i>
           </div>
         </div>
-        <div class="list-items">
-       
-        </div>
+        <div class="list-items"></div>
       </div>
-      <hr>
+      <hr />
 
       <div class="row">
         <div class="accordion-header">
           <div class="title-row">
             <div class="icon">
               <i class="bi bi-chevron-compact-up"></i>
-            <!-- <i class="bi bi-chevron-compact-down"></i> -->
+              <!-- <i class="bi bi-chevron-compact-down"></i> -->
+            </div>
+            <div class="title">Achieve Great Results</div>
           </div>
-          <div class="title">Achieve Great Results</div> 
-          </div>
-          
+
           <div class="icons">
             <i class="bi bi-pencil-square"></i>
 
             <i class="bi bi-trash"></i>
           </div>
         </div>
-        <div class="list-items">
-          
-        </div>
+        <div class="list-items"></div>
       </div>
-
     </div>
-
   </div>
 </div>

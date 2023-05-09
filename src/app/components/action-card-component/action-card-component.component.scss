@@ -18,30 +18,51 @@
     }
   }
   .card-body {
+    position: relative;
     margin: 2em;
     .accordion-header {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      .title-row {
         display: flex;
-        justify-content: space-between;
-        width: 100%;
-        .title-row {
-            display: flex;
-            .title{
-                font-weight: bold;
-                font-size: 26px;
-                padding-inline: 20px;
-            }
-            .badge {
-                border-radius: 25px;                
-                line-height: 16px;
-                
-            }
+        .title {
+          font-weight: bold;
+          font-size: 26px;
+          padding-inline: 20px;
         }
+        .badge {
+          border-radius: 25px;
+          line-height: 16px;
+        }
+      }
     }
+    .icons {
+      .popover-container {
+        position: absolute;
+        background-color: #d1e7dd;
+        border: 1px solid #a3cfbb;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        width: 800px;
+        height: 145px;
+        transform: translate(-100%, -120%);
+        .popover-body {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          color: #0f5132;
+          margin: 1em;
+        }
+      }
+    }
+
     .list-items {
       margin-left: 1.5em;
-        li {
-          font-size: 20px;
-        }
+      li {
+        font-size: 20px;
+      }
     }
   }
   i {
