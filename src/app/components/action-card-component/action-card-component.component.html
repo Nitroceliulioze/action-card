@@ -1,9 +1,7 @@
 <div class="container">
   <div class="card">
     <div class="card-top">
-      <h5 class="card-title" [ngStyle]="{ color: titleColor }">
-        {{ title }}
-      </h5>
+      <h5 class="card-title" [ngStyle]="{ color: titleColor }">{{ title }}</h5>
       <button>
         <i class="bi bi-plus-circle"></i>
         {{ addActivityText }}
@@ -24,7 +22,6 @@
                 >{{ row.cardBadgeText }}</span
               >
             </div>
-
             <div class="icons">
               <i class="bi bi-pencil-square"></i>
               <div class="delete-action" *ngIf="!row.isDeletableAction">
@@ -46,14 +43,12 @@
           </div>
         </ng-container>
 
-        <ng-container>
-          <div class="list-items" *ngIf="isListOpen">
-            <ul *ngFor="let listItem of row.cardRowListItems">
-              <li>{{ listItem }}</li>
-            </ul>
-          </div>
+        <ng-container *ngIf="isListOpen">
+          <ul *ngFor="let listItem of row.cardRowListItems">
+            <li>{{ listItem }}</li>
+          </ul>
         </ng-container>
-        <hr />
+        <hr id="break-line" *ngIf="!row.isLastItem"/>
       </div>
     </div>
   </div>

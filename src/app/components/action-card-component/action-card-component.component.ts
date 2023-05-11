@@ -13,9 +13,10 @@ export class ActionCardComponentComponent {
   @Input() addActivityText!: string;
   @Input() deleteText!: string;
   @Input() cardContentRow: ActionCardContentInterface[] = [];
+  @Input() isLastItem!: boolean;
   isListOpen: boolean;
   showPopover: boolean;
-  
+
   constructor() {
     this.isListOpen = false;
     this.showPopover = false;
