@@ -15,61 +15,6 @@
         font-weight: bold;
         font-size: 26px;
       }
-    }
-    .card-body {
-      position: relative;
-      margin: 2em;
-      .accordion-header {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        .title-row {
-          display: flex;
-          .title {
-            font-weight: bold;
-            font-size: 26px;
-            padding-inline: 20px;
-          }
-          .badge {
-            border-radius: 25px;
-            line-height: 16px;
-          }
-        }
-      }
-      .icons {
-        display: flex;
-        gap: 5px;
-        .popover-container {
-          position: absolute;
-          background-color: #d1e7dd;
-          border: 1px solid #a3cfbb;
-          border-radius: 8px;
-          display: flex;
-          flex-direction: column;
-          width: 800px;
-          height: 145px;
-          transform: translate(-100%, -120%);
-          .popover-body {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            color: #0f5132;
-            margin: 1em;
-          }
-        }
-      }
-      ul {
-        margin-left: 1.5em;
-        li {
-          font-size: 20px;
-        }
-      }
-    }
-    i {
-      cursor: pointer;
-    }
-  }
-  #break-line {
-    border: 1px solid #000000;
+    }    
   }
 }
