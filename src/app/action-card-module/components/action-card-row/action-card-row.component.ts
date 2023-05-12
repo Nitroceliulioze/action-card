@@ -28,15 +28,15 @@ export class ActionCardRowComponent {
     this.isListOpen = !this.isListOpen;
   }
 
-  onEdit() {
+  onEdit(): void {
     this.btnEdit.emit();
   }
 
-  onDelete() {
+  onDelete(): void {
     this.btnDelete.emit();
   }
 
-  onAction() {
+  onAction(): void {
     this.btnAction.emit();
   }
 }

@@ -17,15 +17,15 @@ export class ActionCardComponentComponent {
   @Output() btnAction = new EventEmitter();
   @Output() btnDelete = new EventEmitter()
 
-  edit() {
+  edit(): void {
     this.btnEdit.emit();
   }
 
-  action() {
+  action(): void {
     this.btnAction.emit();
   }
 
-  delete() {
+  delete(): void {
     this.btnDelete.emit()
   }
 }

@@ -6,13 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
-  edit() {
+  edit(): void {
     console.log('edit');
   }
-  delete() {
+  delete(): void {
     console.log('delete');
   }
-  action() {
+  action(): void {
     console.log('action');
   }
 }
