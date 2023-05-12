@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="card">
+    <div class="card-top">
+      <h5 class="card-title" [ngStyle]="{ color: titleColor }">{{ title }}</h5>
+      <button>
+        <i class="bi bi-plus-circle"></i>
+        {{ addActivityText }}
+      </button>
+    </div>
+    <ng-container *ngFor="let row of cardContentRow; let last = last">
+      <app-action-card-row [row]="row" [deleteText]="deleteText">
+      </app-action-card-row>
+      <hr *ngIf="!last" />
+    </ng-container>
+  </div>
+</div>

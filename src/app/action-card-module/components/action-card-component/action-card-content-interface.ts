@@ -5,5 +5,4 @@ export interface ActionCardContentInterface {
     cardActionPopoverHeader?: string;
     cardActionPopoverBody?: string;
     cardRowListItems: string[];
-    isLastItem: boolean;
 }
