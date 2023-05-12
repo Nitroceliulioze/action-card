@@ -13,4 +13,16 @@ export class ActionCardComponentComponent {
   @Input() addActivityText!: string;
   @Input() deleteText!: string;
   @Input() cardContentRow: ActionCardContentInterface[] = [];
+
+  edit() {
+    console.log('edit')
+  }
+
+  action() {
+    console.log('action')
+  }
+
+  delete() {
+    console.log('delete')
+  }
 }

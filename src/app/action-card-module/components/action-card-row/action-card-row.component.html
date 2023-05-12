@@ -12,9 +12,9 @@
         >
       </div>
       <div class="icons">
-        <i class="bi bi-pencil-square"></i>
+        <i class="bi bi-pencil-square" (click)="onEdit()"></i>
         <div class="delete-action" *ngIf="!row.isDeletableAction">
-          <span class="deleteText" (click)="showPopover = true">{{
+          <span class="deleteText" (click)="showPopover = true" (click)="onAction()">{{
             deleteText
           }}</span>
           <div *ngIf="showPopover" class="popover-container">
@@ -27,7 +27,7 @@
             </div>
           </div>
         </div>
-        <i *ngIf="row.isDeletableAction" class="bi bi-trash"></i>
+        <i *ngIf="row.isDeletableAction" class="bi bi-trash" (click)="onDelete()"></i>
       </div>
     </div>
   </ng-container>
