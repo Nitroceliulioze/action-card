@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ActionCardContentInterface } from '../action-card-component/action-card-content-interface';
 
 @Component({
@@ -9,6 +9,9 @@ import { ActionCardContentInterface } from '../action-card-component/action-card
 export class ActionCardRowComponent {
   @Input() deleteText!: string;
   @Input() row!: ActionCardContentInterface;
+  @Output() editCardRow = new EventEmitter();
+  @Output() deleteCardRow = new EventEmitter();
+  @Output() actionCardRow = new EventEmitter();
   isListOpen: boolean;
   showPopover: boolean;
 
@@ -23,5 +26,17 @@ export class ActionCardRowComponent {
 
   toggleList(): void {
     this.isListOpen = !this.isListOpen;
+  }
+
+  onEdit(): void {
+    this.editCardRow.emit();
+  }
+
+  onDelete(): void {
+    this.deleteCardRow.emit();
+  }
+
+  onAction(): void {
+    this.actionCardRow.emit();
   }
 }

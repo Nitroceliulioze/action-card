@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 import { ActionCardContentInterface } from './action-card-content-interface';
 
 @Component({
@@ -13,4 +13,19 @@ export class ActionCardComponentComponent {
   @Input() addActivityText!: string;
   @Input() deleteText!: string;
   @Input() cardContentRow: ActionCardContentInterface[] = [];
+  @Output() editCardAction = new EventEmitter();
+  @Output() actionCardAction = new EventEmitter();
+  @Output() deleteCardAction = new EventEmitter()
+
+  edit(): void {
+    this.editCardAction.emit();
+  }
+
+  action(): void {
+    this.actionCardAction.emit();
+  }
+
+  delete(): void {
+    this.deleteCardAction.emit()
+  }
 }
