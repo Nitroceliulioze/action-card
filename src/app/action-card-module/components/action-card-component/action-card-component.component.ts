@@ -13,19 +13,19 @@ export class ActionCardComponentComponent {
   @Input() addActivityText!: string;
   @Input() deleteText!: string;
   @Input() cardContentRow: ActionCardContentInterface[] = [];
-  @Output() btnEdit = new EventEmitter();
-  @Output() btnAction = new EventEmitter();
-  @Output() btnDelete = new EventEmitter()
+  @Output() editCardAction = new EventEmitter();
+  @Output() actionCardAction = new EventEmitter();
+  @Output() deleteCardAction = new EventEmitter()
 
   edit(): void {
-    this.btnEdit.emit();
+    this.editCardAction.emit();
   }
 
   action(): void {
-    this.btnAction.emit();
+    this.actionCardAction.emit();
   }
 
   delete(): void {
-    this.btnDelete.emit()
+    this.deleteCardAction.emit()
   }
 }

@@ -9,9 +9,9 @@ import { ActionCardContentInterface } from '../action-card-component/action-card
 export class ActionCardRowComponent {
   @Input() deleteText!: string;
   @Input() row!: ActionCardContentInterface;
-  @Output() btnEdit = new EventEmitter();
-  @Output() btnDelete = new EventEmitter();
-  @Output() btnAction = new EventEmitter();
+  @Output() editCardRow = new EventEmitter();
+  @Output() deleteCardRow = new EventEmitter();
+  @Output() actionCardRow = new EventEmitter();
   isListOpen: boolean;
   showPopover: boolean;
 
@@ -29,14 +29,14 @@ export class ActionCardRowComponent {
   }
 
   onEdit(): void {
-    this.btnEdit.emit();
+    this.editCardRow.emit();
   }
 
   onDelete(): void {
-    this.btnDelete.emit();
+    this.deleteCardRow.emit();
   }
 
   onAction(): void {
-    this.btnAction.emit();
+    this.actionCardRow.emit();
   }
 }
