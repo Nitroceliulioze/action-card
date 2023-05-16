@@ -7,8 +7,9 @@
         {{ addActivityText }}
       </button>
     </div>
-    <ng-container *ngFor="let row of cardContentRow">
+    <ng-container *ngFor="let row of cardContentRow; let last = last">
       <app-action-card-row
+        [ngClass]="{ 'last-child': last }"
         [row]="row"
         [deleteText]="deleteText"
         (editCardRow)="edit()"
