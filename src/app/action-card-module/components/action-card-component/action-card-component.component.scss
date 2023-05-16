@@ -1,6 +1,12 @@
 .container {
   .card {
     margin: 2em;
+    app-action-card-row {
+      margin: 0.5em 2em;
+    }
+    app-action-card-row:not(:last-child) {
+      border-bottom: 2px solid black;
+    }
     .card-top {
       display: flex;
       justify-content: space-between;
@@ -15,11 +21,6 @@
         font-weight: bold;
         font-size: 26px;
       }
-    }
-    hr {
-      transform: translate(5%);
-      width: 90%;
-      border: 1px solid #000000;
     }
   }
 }
