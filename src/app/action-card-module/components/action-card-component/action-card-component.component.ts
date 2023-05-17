@@ -1,13 +1,5 @@
-import {
-  Component,
-  Input,
-  EventEmitter,
-  Output,
-  ViewChild,
-  AfterViewInit,
-} from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 import { ActionCardContentInterface } from './action-card-content-interface';
-import { ActionCardRowComponent } from '../action-card-row/action-card-row.component';
 
 @Component({
   selector: 'app-action-card-component',
@@ -23,9 +15,8 @@ export class ActionCardComponentComponent {
   @Input() cardContentRow: ActionCardContentInterface[] = [];
   @Output() editCardAction = new EventEmitter();
   @Output() actionCardAction = new EventEmitter();
-  @Output() deleteCardAction = new EventEmitter();
+  @Output() deleteCardAction = new EventEmitter()
 
- 
   edit(): void {
     this.editCardAction.emit();
   }
@@ -35,6 +26,6 @@ export class ActionCardComponentComponent {
   }
 
   delete(): void {
-    this.deleteCardAction.emit();
+    this.deleteCardAction.emit()
   }
 }

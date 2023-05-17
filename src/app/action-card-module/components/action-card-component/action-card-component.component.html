@@ -7,7 +7,9 @@
         {{ addActivityText }}
       </button>
     </div>
-    <ng-content></ng-content>
-   
+    <ng-container *ngFor="let row of cardContentRow">
+      <app-action-card-row [row]="row" [deleteText]="deleteText" (editCardRow)="edit()" (actionCardRow)="action()" (deleteCardRow)="delete()">
+      </app-action-card-row>
+    </ng-container>
   </div>
 </div>
