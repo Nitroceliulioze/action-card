@@ -9,6 +9,7 @@ import { ActionCardContentInterface } from '../action-card-component/action-card
 export class ActionCardRowComponent {
   @Input() deleteText!: string;
   @Input() row!: ActionCardContentInterface;
+  @Input() cardContentRow: ActionCardContentInterface[] = [];
   @Output() editCardRow = new EventEmitter();
   @Output() deleteCardRow = new EventEmitter();
   @Output() actionCardRow = new EventEmitter();
