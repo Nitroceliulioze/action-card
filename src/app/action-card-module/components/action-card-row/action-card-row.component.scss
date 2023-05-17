@@ -1,6 +1,8 @@
+@import '../../../../variables';
+
 .card-body {
   position: relative;
-  padding: 20px 0;
+  padding: $spacing-base 0;
   .accordion-header {
     display: flex;
     justify-content: space-between;
@@ -8,23 +10,23 @@
     .title-row {
       display: flex;
       .title {
-        font-weight: bold;
-        font-size: 26px;
-        padding-inline: 20px;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-base;
+        padding-inline: $spacing-base;
       }
       .badge {
-        border-radius: 25px;
+        border-radius: $radius-lg;
       }
     }
   }
   .icons {
     display: flex;
-    gap: 5px;
+    gap: $spacing-sm;
     .popover-container {
       position: absolute;
-      background-color: #d1e7dd;
-      border: 1px solid #a3cfbb;
-      border-radius: 8px;
+      background-color: $popover-background-color;
+      border: $popover-border;
+      border-radius: $radius-base;
       display: flex;
       flex-direction: column;
       width: 800px;
@@ -34,15 +36,15 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        color: #0f5132;
-        margin: 12px;
+        color: $popover-text-color;
+        margin:  $spacing-sm;
       }
     }
   }
   ul {
-    margin-left: 24px;
+    margin-left: $spacing-base;
     li {
-      font-size: 20px;
+      font-size: $font-size-sm;
     }
   }
 }
