@@ -1,0 +1,33 @@
+// Typography 
+$primary-font: 'Exo', sans-serif;
+
+// Font Sizes 
+$font-size-base: 24x; 
+$font-size-lg: 36px; 
+$font-size-sm: 12px;
+
+//Font weights
+$font-weight-bold: bold;
+$font-weight-regular: normal;
+$font-weight-light: light;
+
+// Colors 
+$primary-color: black; 
+$secondary-color: #2ecc71;
+$error-color: #e74c3c;
+$transparent: transparent;
+
+// Spacings 
+$spacing-base: 10px; 
+$spacing-lg: 32px; 
+$spacing-sm: 5px; 
+
+// Radiuses 
+$radius-base: 5px; 
+$radius-lg: 10px; 
+$radius-sm: 2px; 
+
+// Lines 
+$line-base: 1px solid $primary-color; 
+$line-lg: 2px solid $primary-color; 
+$line-sm: 0.5px solid $primary-color;
