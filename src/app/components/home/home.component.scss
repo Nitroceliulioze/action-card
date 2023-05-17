@@ -1,6 +1,3 @@
-app-action-card-row {
-    margin: 0.5em 2em;
-  }
-  app-action-card-row:not(:last-child) {
-    border-bottom: 2px solid black;
-  }
+app-action-card-row:not(:last-child) {
+  border-bottom: 2px solid black;
+}
