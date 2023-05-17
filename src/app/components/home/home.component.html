@@ -2,17 +2,19 @@
   titleColor="red"
   title="Card for Organizing Activities"
   addActivityText="Add activity"
-  
   (editCardAction)="edit()"
   (actionCardAction)="action()"
   (deleteCardAction)="delete()"
 >
-<app-action-card-row [ngStyle]="{'margin': '0 32px'}"
-*ngFor="let row of cardContentRow"
-[row]="row"
-[deleteText]="deleteText"
-(editCardRow)="edit()"
-(actionCardRow)="action()"
-(deleteCardRow)="delete()"
->
-</app-action-card-row></app-action-card-component>
+  <app-action-card-row
+    [ngStyle]="{ margin: '0 32px' }"
+    *ngFor="let row of cardContentRow; let last = last"
+    [ngClass]="{ last: last }"
+    [row]="row"
+    [deleteText]="deleteText"
+    (editCardRow)="edit()"
+    (actionCardRow)="action()"
+    (deleteCardRow)="delete()"
+  >
+  </app-action-card-row
+></app-action-card-component>
