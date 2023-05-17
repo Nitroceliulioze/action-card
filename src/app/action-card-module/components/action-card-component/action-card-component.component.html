@@ -7,10 +7,6 @@
         {{ addActivityText }}
       </button>
     </div>
-    <ng-container *ngFor="let row of cardContentRow; let last = last">
-      <app-action-card-row [row]="row" [deleteText]="deleteText" (editCardRow)="edit()" (actionCardRow)="action()" (deleteCardRow)="delete()">
-      </app-action-card-row>
-      <hr *ngIf="!last" />
-    </ng-container>
+    <ng-content></ng-content>
   </div>
 </div>
