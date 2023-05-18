@@ -1,3 +1,5 @@
-app-action-card-row:not(:last-child) {
-  border-bottom: 2px solid black;
+@import '../../../variables'; 
+
+app-action-card-row:not(.last) {
+  border-bottom: $line-lg;
 }

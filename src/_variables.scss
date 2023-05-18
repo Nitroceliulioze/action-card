@@ -1,0 +1,36 @@
+// Typography 
+$primary-font: 'Exo', sans-serif;
+
+// Font Sizes 
+$font-size-base: 24px; 
+$font-size-lg: 36px; 
+$font-size-sm: 18px;
+
+//Font weights
+$font-weight-bold: bold;
+$font-weight-regular: normal;
+$font-weight-light: light;
+
+// Colors 
+$primary-color: black; 
+$transparent: transparent;
+
+// Spacings 
+$spacing-base: 20px; 
+$spacing-lg: 32px; 
+$spacing-sm: 10px; 
+
+// Radiuses 
+$radius-base: 5px; 
+$radius-lg: 25px; 
+
+
+// Lines 
+$line-base: 1px solid $primary-color; 
+$line-lg: 2px solid $primary-color; 
+
+//Popover
+$popover-text-color: #0f5132;
+$popover-border-color: #a3cfbb;
+$popover-background-color: #d1e7dd;
+$popover-border: 1px solid $popover-border-color;

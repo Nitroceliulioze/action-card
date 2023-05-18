@@ -1,19 +1,21 @@
+@import '../../../../variables';
+
 .container {
   .card {
-    margin: 32px;
+    margin: $spacing-lg;
     .card-top {
       display: flex;
       justify-content: space-between;
-      margin: 32px;
+      margin: $spacing-lg;
       .card-title {
-        font-weight: bold;
-        font-size: 36px;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-lg;
       }
       button {
         border: none;
-        background-color: transparent;
-        font-weight: bold;
-        font-size: 26px;
+        background-color: $transparent;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-base;
       }
     }
   }
