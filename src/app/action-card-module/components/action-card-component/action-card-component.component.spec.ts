@@ -20,4 +20,23 @@ describe('ActionCardComponentComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should emit editCardAction when edit() is called', () => {
+    spyOn(component.editCardAction, 'emit');
+    component.edit();
+    expect(component.editCardAction.emit).toHaveBeenCalled();
+  });
+
+  it('should emit actionCardAction when action() is called', () => {
+    spyOn(component.actionCardAction, 'emit');
+    component.action();
+    expect(component.actionCardAction.emit).toHaveBeenCalled();
+  });
+
+  it('should emit deleteCardAction when delete() is called', () => {
+    spyOn(component.deleteCardAction, 'emit');
+    component.delete();
+    expect(component.deleteCardAction.emit).toHaveBeenCalled();
+  });
+  
 });

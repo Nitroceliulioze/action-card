@@ -14,6 +14,7 @@ export class ActionCardRowComponent {
   @Output() actionCardRow = new EventEmitter();
   isListOpen: boolean;
   showPopover: boolean;
+  
 
   constructor() {
     this.isListOpen = false;
