@@ -1,4 +1,3 @@
-import { ActionCardContentInterface } from './../action-card-component/action-card-content-interface';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ActionCardRowComponent } from './action-card-row.component';
