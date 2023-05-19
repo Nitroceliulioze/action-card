@@ -25,7 +25,7 @@ describe('HomeComponent', () => {
   });
 
   it('should call edit and log "edit"', () => {
-    spyOn(console, 'log'); // Spy on console.log to check if it's called
+    spyOn(console, 'log'); 
     component.edit();
     expect(console.log).toHaveBeenCalledWith('edit');
   });
