@@ -13,19 +13,4 @@ export class ActionCardComponentComponent {
   @Input() addActivityText!: string;
   @Input() deleteText!: string;
   @Input() cardContentRow: ActionCardContentInterface[] = [];
-  @Output() editCardAction = new EventEmitter();
-  @Output() actionCardAction = new EventEmitter();
-  @Output() deleteCardAction = new EventEmitter()
-
-  edit(): void {
-    this.editCardAction.emit();
-  }
-
-  action(): void {
-    this.actionCardAction.emit();
-  }
-
-  delete(): void {
-    this.deleteCardAction.emit()
-  }
 }
