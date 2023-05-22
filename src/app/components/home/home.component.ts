@@ -41,13 +41,13 @@ export class HomeComponent {
     },
   ];
 
-  edit(): void {
+  onEditCardRow(): void {
     console.log('edit');
   }
-  delete(): void {
+  onDeleteCardRow(): void {
     console.log('delete');
   }
-  action(): void {
+  onActionCardRow(): void {
     console.log('action');
   }
 }
