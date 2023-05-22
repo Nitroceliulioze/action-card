@@ -16,11 +16,11 @@ import {
     }),
     //track events in that story: jei butu click
     argTypes: {
-      toggleList: { action: 'list toggled' },
-      onEdit: { action: 'edit clicked' },
-      onAction: { action: 'action clicked' },
-      closePopover: { action: 'popover closed' },
-      onDelete: { action: 'delete clicked' },
+      toggleList: { action: toggleList() },
+      onEdit: { action: onEdit() },
+      onAction: { action: onAction() },
+      closePopover: { action: closePopover() },
+      onDelete: { action: onDelete() },
     },
     decorators: [
       applicationConfig({
@@ -30,7 +30,7 @@ import {
         declarations: [ActionCardRowComponent],
       }),
       componentWrapperDecorator(
-        (story) => `<div class="card" style="margin-top: 200px"> ${story} </div>`
+        (story) => `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"><div class="card-body" style="margin-top: 150px"> ${story} </div>`
       ),
     ],
   };
@@ -38,7 +38,7 @@ import {
   export default meta;
   type Story = StoryObj<ActionCardRowComponent>;
   
-  export const Row: Story = {
+  export const RowWithBadge: Story = {
     args: {
       row: {
         cardRowTitle: 'Discover New Features',
@@ -54,6 +54,32 @@ import {
           'Data-driven Decision Making',
         ],
       },
+      deleteText: 'Delete?'
     },
   };
-  
+
+  export const DeletableRow: Story = {
+    args: {
+      row: {
+        cardRowTitle: 'Discover New Features',
+        isDeletableAction: true,
+        cardRowListItems: [
+          'Interactive Dashboard',
+          'Smart Reminders & Notifications',
+          'Data-driven Decision Making',
+        ],
+      },
+    },
+  };
+
+  function closePopover(): void {}
+
+  function toggleList(): void {}
+
+  function onEdit(): void {}
+
+  function onDelete(): void {}
+
+  function onAction(): void {}
+
+
