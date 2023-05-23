@@ -1,7 +1,7 @@
 <app-action-card-component
   titleColor="red"
   title="Card for Organizing Activities"
-  addActivityText="Add activity" 
+  addActivityText="Add activity"
 >
   <app-action-card-row
     [ngStyle]="{ margin: '0 32px' }"
@@ -10,8 +10,8 @@
     [row]="row"
     [deleteText]="deleteText"
     (editCardRow)="onEditCardRow()"
-  (actionCardRow)="onActionCardRow()"
-  (deleteCardRow)="onDeleteCardRow()"
+    (actionCardRow)="onActionCardRow()"
+    (deleteCardRow)="onDeleteCardRow()"
   >
   </app-action-card-row
 ></app-action-card-component>

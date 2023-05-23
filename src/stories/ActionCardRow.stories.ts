@@ -16,11 +16,11 @@ import {
     }),
     //track events in that story: jei butu click
     argTypes: {
-      toggleList: { action: toggleList() },
-      onEdit: { action: onEdit() },
-      onAction: { action: onAction() },
-      closePopover: { action: closePopover() },
-      onDelete: { action: onDelete() },
+      toggleList: { action: 'toggleList' },
+      onEdit: { action: 'onEdit' },
+      onAction: { action: 'onAction' },
+      closePopover: { action: 'closePopover' },
+      onDelete: { action: 'onDelete' },
     },
     decorators: [
       applicationConfig({
@@ -37,7 +37,15 @@ import {
   
   export default meta;
   type Story = StoryObj<ActionCardRowComponent>;
-  
+
+  export const actionsData = {
+    toggleList: () => console.log('Toggle List called'),
+    onEdit: () => console.log('Edit called'),
+    onAction: () => console.log('Action called'),
+    closePopover: () => console.log('Popover closed'),
+    onDelete: () => console.log('Delete called'),
+  };
+
   export const RowWithBadge: Story = {
     args: {
       row: {
@@ -54,7 +62,12 @@ import {
           'Data-driven Decision Making',
         ],
       },
-      deleteText: 'Delete?'
+      deleteText: 'Delete?',
+      toggleList: actionsData.toggleList,
+      onEdit: actionsData.onEdit,
+      onAction: actionsData.onAction,
+      closePopover: actionsData.closePopover,
+      onDelete: actionsData.onDelete,
     },
   };
 
@@ -69,17 +82,23 @@ import {
           'Data-driven Decision Making',
         ],
       },
+      toggleList: actionsData.toggleList,
+      onEdit: actionsData.onEdit,
+      onAction: actionsData.onAction,
+      closePopover: actionsData.closePopover,
+      onDelete: actionsData.onDelete,
     },
+    
   };
 
-  function closePopover(): void {}
-
-  function toggleList(): void {}
-
-  function onEdit(): void {}
-
-  function onDelete(): void {}
-
-  function onAction(): void {}
+ 
+  
+  RowWithBadge.parameters = {
+    actions: actionsData,
+  };
+  
+  DeletableRow.parameters = {
+    actions: actionsData,
+  };
 
 

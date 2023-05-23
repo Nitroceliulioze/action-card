@@ -17,17 +17,7 @@ const meta: Meta<HomeComponent> = {
     props: { ...args },
   }),
   //track events in that story: jei butu click
-  argTypes: {
-    onEditCardRow: { action: 'editCardRow' },
-    onActionCardRow: { action: 'actionCardRow' },
-    onDeleteCardRow: { action: 'deleteCardRow' },
-
-    // toggleList: { action: toggleList() },
-    // onEdit: { action: onEdit() },
-    // onAction: { action: onAction() },
-    // closePopover: { action: closePopover() },
-    // onDelete: { action: onDelete() }
-  },
+  argTypes: {},
   decorators: [
     applicationConfig({
       providers: [],
@@ -37,7 +27,7 @@ const meta: Meta<HomeComponent> = {
     }),
     componentWrapperDecorator(
       (story) =>
-        `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"> <div style="font-family:'Exo', sans-serif"> ${story}</div>`
+        `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"> <div style="font-family:'Exo', sans-serif"> ${story} </div>`
     ),
   ],
 };
@@ -69,11 +59,7 @@ export const ActionCardWithAllData: Story = {
         cardBadgeText: '',
         cardActionPopoverHeader: '',
         cardActionPopoverBody: '',
-        cardRowListItems: [
-          'Interactive Dashboard',
-          'Smart Reminders & Notifications',
-          'Data-driven Decision Making',
-        ],
+        cardRowListItems: [],
       },
       {
         cardRowTitle: 'Achieve Great Results',
@@ -81,16 +67,8 @@ export const ActionCardWithAllData: Story = {
         cardBadgeText: '',
         cardActionPopoverHeader: '',
         cardActionPopoverBody: '',
-        cardRowListItems: [
-          'Interactive Dashboard',
-          'Smart Reminders & Notifications',
-          'Data-driven Decision Making',
-        ],
+        cardRowListItems: ['Interactive Dashboard'],
       },
-    ], 
-    onEditCardRow: () => console.log('Edit Card Row'),
-    onActionCardRow: () => console.log('Action Card Row'),
-    onDeleteCardRow: () => console.log('Delete Card Row'),
- 
-}
-}
+    ],
+  },
+};

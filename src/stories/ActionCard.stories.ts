@@ -18,7 +18,7 @@ const meta: Meta<ActionCardComponentComponent> = {
         moduleMetadata({
             declarations: [ ActionCardComponentComponent, ActionCardRowComponent ],
         }),
-        componentWrapperDecorator((story)=> `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"> <div> ${story }</div>`),
+        componentWrapperDecorator((story)=> `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"> <div> ${story } </div>`),
     ],
 };
 
