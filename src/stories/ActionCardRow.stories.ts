@@ -39,11 +39,11 @@ export default meta;
 type Story = StoryObj<ActionCardRowComponent>;
 
 export const actionsData = {
-  toggleList: () => console.log('Toggle List called'),
-  onEdit: () => console.log('Edit called'),
-  onAction: () => console.log('Action called'),
-  closePopover: () => console.log('Popover closed'),
-  onDelete: () => console.log('Delete called'),
+  toggleList: () => alert('Toggle List called'),
+  onEdit: () => alert('Edit called'),
+  onAction: () => alert('Action called'),
+  closePopover: () => alert('Popover closed'),
+  onDelete: () => alert('Delete called'),
 };
 
 export const RowWithBadge: Story = {

@@ -1,4 +1,6 @@
 import type { StorybookConfig } from "@storybook/angular";
+import '../src/styles.scss';
+import '../src/_variables.scss'
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
