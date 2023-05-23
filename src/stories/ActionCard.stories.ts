@@ -9,7 +9,6 @@ const meta: Meta<ActionCardComponentComponent> = {
     render: (args: ActionCardComponentComponent) => ({
         props: { ...args },
     }),
-    //track events in that story: jei butu click
     argTypes: { },
     decorators: [
         applicationConfig({

@@ -16,7 +16,6 @@ const meta: Meta<HomeComponent> = {
   render: (args: HomeComponent) => ({
     props: { ...args },
   }),
-  //track events in that story: jei butu click
   argTypes: {},
   decorators: [
     applicationConfig({
