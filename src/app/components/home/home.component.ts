@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActionCardContentInterface } from 'src/app/action-card-module/components/action-card-component/action-card-content-interface';
+import { ActionCardContentInterface } from 'src/app/action-card-module/action-card-content-interface';
 
 @Component({
   selector: 'app-home',

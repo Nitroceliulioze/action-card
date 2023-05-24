@@ -5,7 +5,7 @@ import {
   componentWrapperDecorator,
   moduleMetadata,
 } from '@storybook/angular';
-import { ActionCardRowComponent } from 'src/app/action-card-module/components/action-card-row/action-card-row.component';
+import { ActionCardRowComponent } from 'src/app/action-card-module/action-card-row/action-card-row.component';
 
 const meta: Meta<ActionCardRowComponent> = {
   title: 'Project/ActionCardRow',

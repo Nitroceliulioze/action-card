@@ -5,8 +5,8 @@ import {
   componentWrapperDecorator,
   moduleMetadata,
 } from '@storybook/angular';
-import { ActionCardComponentComponent } from 'src/app/action-card-module/components/action-card-component/action-card-component.component';
-import { ActionCardRowComponent } from 'src/app/action-card-module/components/action-card-row/action-card-row.component';
+import { ActionCardComponentComponent } from 'src/app/action-card-module/action-card-component/action-card-component.component';
+import { ActionCardRowComponent } from 'src/app/action-card-module/action-card-row/action-card-row.component';
 import { HomeComponent } from 'src/app/components/home/home.component';
 
 const meta: Meta<HomeComponent> = {

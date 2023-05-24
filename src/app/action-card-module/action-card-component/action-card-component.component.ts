@@ -1,5 +1,5 @@
 import { Component, Input, EventEmitter, Output } from '@angular/core';
-import { ActionCardContentInterface } from './action-card-content-interface';
+import { ActionCardContentInterface } from '../action-card-content-interface';
 
 @Component({
   selector: 'app-action-card-component',
